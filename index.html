@@ -71,42 +71,11 @@
 </head>
 
 <body>
-    <nav id="navbar-product-top" class="navbar navbar-dark">
-        <ul>
-            <li class="logo">
-                <a href="http://knightlab.com">
-                    <img src="https://cdn.knightlab.com/libs/orangeline/0.1.1/assets/knightlab-dark.png" />
-                </a>
-            </li>
-        </ul>
-        <div class="nav-mobile-menu">
-            <button class="button-plain">
-        <span class="icon-menu"></span>
-      </button>
-        </div>
-        <ul class="nav-right navbar-nav">
-
-
-            <li><a class="button button-dark button-small-tablet  button-active" href="https://knightlab.northwestern.edu/projects/">Projects</a></li>
-
-            <li><a class="button button-dark button-small-tablet  " href="https://studio.knightlab.com/">Studio</a></li>
-
-            <li><a class="button button-dark button-small-tablet  " href="https://localnewsinitiative.northwestern.edu/">Local
-          News</a></li>
-
-            <li><a class="button button-dark button-small-tablet  " href="https://knightlab.northwestern.edu/posts/">Posts</a>
-            </li>
-
-            <li><a class="button button-dark button-small-tablet  " href="https://knightlab.northwestern.edu/community/">Community</a></li>
-
-        </ul>
-    </nav>
-
     <header class="header-product">
         <h1 class="product-logo product-logo-large">
-            SQL Murder Mystery
+            Mystère du meurtre SQL
         </h1>
-        <h2 class="product-tagline">Can you find out whodunnit?</h2>
+        <h2 class="product-tagline">Peux-tu découvrir le coupable</h2>
     </header>
 
     <div class="container">
@@ -115,39 +84,43 @@
             <div class="grid-item">
                 <img src="174092-clue-illustration.png" class="img-rounded" alt="A decorative illustration of a detective looking at an evidence board.">
                 <p>
-                    There's been a Murder in SQL City! The SQL Murder Mystery is designed to be both a self-directed lesson to learn SQL concepts and commands and a fun game for experienced SQL users to solve an intriguing crime.
+                    Il y a eu un meutre dans la ville SQL! Le mystère du meurtre SQL est designé pour être à la fois une leçon en autonomie pour apprendre les conceptes et commandes du SQL et pour être un jeu amusant pour les utilisateurs plus avancés de SQL et ainsi résoudre un crime.
                 </p>
             </div>
         </div>
 
         <div class="grid">
             <div class="grid-item">
-                <h2>New to SQL?</h2>
+                <h2>Guide pour les nouveaux au SQL</h2>
                 <p>
-                    This exercise is meant more as a way to practice SQL skills than a full tutorial. If you've never used SQL at all, <a href="walkthrough.html">try the walkthrough</a>. If you really want to learn a lot about SQL, you may prefer a complete
-                    tutorial like <a href="https://selectstarsql.com/">Select Star SQL.</a>
+                    Cet exercise est pensé pour pratiquer les compétences en SQL plutôt qu'un tutoriel complet. Si tu n'as jamais utilisé SQL, <a href="walkthrough.html">essayez le tutoriel</a>. Si tu veux vraiment apprendre beaucoup sur SQL, tu préféres peut-être un tutoriel complet comme <a href="https://selectstarsql.com/">Select Star SQL.</a>
+
 
                 </p>
-                <p>If you're comfortable with SQL, you can <a href="#experienced">dive in below</a>!</p>
+                <p>
+                    Si tu es à l'aise avec SQL, tu peux <a href="#experienced">plonger ci-dessous</a>!
             </div>
         </div>
 
 
         <div class="grid">
             <div class="grid-item">
-                <h2 id="experienced">Experienced SQL sleuths start here</h2>
+                <h2 id="experienced">
+                    Expérimenté en SQL, commences ici
+                </h2>
                 <p>
-                    A crime has taken place and the detective needs your help. The detective gave you the crime scene report, but you somehow lost it. You vaguely remember that the crime was a <strong>​murder​</strong> that occurred sometime on ​<strong>Jan.15, 2018​</strong>                    and that it took place in ​<strong>SQL City​</strong>. Start by retrieving the corresponding crime scene report from the police department’s database.
+                    Un crime a eu lieu et le détective a besoin de votre aide. Le détective t'as donné le rapport de la scène de crime, mais tu l'as perdu. Tu te rappel vaguement que le crime était un <strong>meurtre</strong> qui a eu lieu à un moment donné le <strong>15 janvier 2018</strong> et qu'il a eu lieu à <strong>SQL City</strong>. Commence par récupérer le rapport de la scène de crime correspondant dans la base de données du département de police.
                 </p>
 
-                <h3>Exploring the Database Structure</h3>
+                <h3>
+                    Exploration de la structure de la base de données
+                </h3>
 
                 <p>
-                    Experienced SQL users can often use database queries to infer the structure of a database. But each database system has different ways of managing this information. The SQL Murder Mystery is built using SQLite. Use this SQL command to find the tables
-                    in the Murder Mystery database.
+                    Les utilisateurs avancés de SQL peuvent souvent utiliser des requêtes de base de données pour déduire la structure d'une base de données. Mais chaque système de base de données a des façons différentes de gérer ces informations. Le Mystère du meurtre SQL est construit en utilisant SQLite. Utilisez cette commande SQL pour trouver les tables dans la base de données du Mystère du meurtre.
                 </p>
 
-                <sql-exercise data-question="Run this query to find the names of the tables in this database." data-comment="This command is specific to SQLite. For other databases, you'll have to learn their specific syntax." data-default-text="SELECT name 
+                <sql-exercise data-question="Exectute cette demande pour trouver les noms de la table dans cette base de données" data-comment="Cette commande est spécifique a SQLite. Pour d'autres bases de données, tu devras apprendre leur syntaxe spécifique." data-default-text="SELECT name 
   FROM sqlite_master
  where type = 'table'"></sql-exercise>
 
@@ -157,10 +130,10 @@
         <div class="grid">
             <div class="grid-item">
                 <p>
-                    Besides knowing the table names, you need to know how each table is structured. The way this works is also dependent upon which database technology you use. Here's how you do it with SQLite.
+                    En plus de connaître les noms des tables, vous devez connaître la structure de chaque table. La façon dont cela fonctionne dépend également de la technologie de base de données que vous utilisez. Voici comment vous faites avec SQLite.
                 </p>
 
-                <sql-exercise data-question="Run this query to find the structure of the `crime_scene_report` table" data-comment="Change the value of 'name' to see the structure of the other tables you learned about with the previous query." data-default-text="SELECT sql 
+                <sql-exercise data-question="Execute cette requête pour trouver la strucutre de la table `crime_scene_report`" data-comment="Change la valeur de 'name' pour voir la structure des autres tables dont tu as pris connaisances dans la dernière requête." data-default-text="SELECT sql 
   FROM sqlite_master
  where name = 'crime_scene_report'"></sql-exercise>
 
@@ -170,19 +143,21 @@
 
         <div class="grid">
             <div class="grid-item">
-                <h3>The rest is up to you!</h3>
+                <h3>
+                    Le reste est à toi!
+                </h3>
+                <p> 
+                    Si vous êtes vraiment à l'aise avec SQL, vous pouvez probablement le faire à partir d'ici.
+                                    </p>
                 <p>
-                    If you're really comfortable with SQL, you can probably get it from here.
+                    Mais <a id="show-schema">clique ici</a> pour voir le schema de la base de données.
+                    <img id="experienced-schema" src="schema.png" alt="Schema diagram" width='1002' height='491'>
                 </p>
                 <p>
-                    But <a id="show-schema">click here</a> to show the schema diagram.
-                    <img id="experienced-schema" src="schema.png" width='1002' height='491'>
-                </p>
-                <p>
-                    And you can always go to the <a href="walkthrough.html">walkthrough</a>.
+                    Et tu peux toujours aller sur le <a href="walkthrough.html">walkthrough</a>.
                 </p>
 
-                <sql-exercise data-question="Use your knowledge of the database schema and SQL commands to find out who committed the murder." data-comment="When you think you know the answer, go to the next section." data-default-text="
+                <sql-exercise data-question="Utilise tes connaisances sur le schéma de la base de données et des commandes SQL pour trouver qui a commis le meurtre." data-comment="Quand tu penses connaître la réponse, vas à la prochaine section." data-default-text="
               
               
 
@@ -195,8 +170,10 @@
 
         <div id="check-solution" class="grid">
             <div class="grid-item">
-                <h3>Check your solution</h3>
-                <sql-exercise data-question="Did you find the killer?" data-comment="" data-default-text="INSERT INTO solution VALUES (1, 'Insert the name of the person you found here');
+                <h3>
+                    Vérifie ta solution
+                </h3>
+                <sql-exercise data-question="As-tu trouvé le tueur ?" data-comment="" data-default-text="INSERT INTO solution VALUES (1, 'Mets ici le nom de la personne que tu as trouvé');
         
         SELECT value FROM solution;"></sql-exercise>
             </div>
@@ -205,25 +182,25 @@
         <div id="credits" class="grid">
             <div class="grid-item">
                 <h3>Credits</h3>
-                <p>The SQL Murder Mystery was created by <a href="https://twitter.com/joonparkmusic">Joon Park</a> and <a href="https://twitter.com/Cathy_MeiyingHe">Cathy He</a> while they were Knight Lab fellows. See the <a href="https://github.com/NUKnightLab/sql-mysteries">GitHub repository</a>                    for more information.</p>
-                <p>Adapted and produced for the web by <a href="https://twitter.com/joegermuska">Joe Germuska</a>.</p>
-                <p>This mystery was inspired by <a href="https://github.com/veltman/clmystery">a crime in the neighboring
-            Terminal City.</a></p>
-                <p>Web-based SQL is made possible by <a href="https://github.com/sql-js/sql.js/">SQL.js</a></p>
-                <p>SQL query custom web components created and released to the public domain by Zi Chong Kao, creator of <a href="https://selectstarsql.com/">Select Star SQL.</a></p>
-                <p>Detective illustration courtesy of <a href="https://www.vecteezy.com/">Vectors by Vecteezy</a></p>
-                <p>Original code for this project is released under the <a href="https://github.com/NUKnightLab/sql-mysteries/blob/master/LICENSE">MIT License</a></p>
-                <p>Original text and other content for this project is released under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC BY-SA 4.0</a></p>
+                <p>Le mystère du meurtre SQL à été crée originellement par <a href="https://twitter.com/joonparkmusic">Joon Park</a> et <a href="https://twitter.com/Cathy_MeiyingHe">Cathy He</a> while they were Knight Lab fellows. See the <a href="https://github.com/NUKnightLab/sql-mysteries">GitHub repository</a>                    for more information.</p>
+                <p>Adapté et produit pour le web par <a href="https://twitter.com/joegermuska">Joe Germuska</a>.</p>
+                <p>Ce mystère à été inspiré par  <a href="https://github.com/veltman/clmystery">a crime in the neighboringTerminal City.</a></p>
+                <p>Traduit en français dans le cadre de l'enseignement pour Madame Hamizi par <a href="https://gihub.com/mattiaparrinello">Mattia PARRINELLO</a></p>
+                <p>SQL sur le web est rendu possible par <a href="https://github.com/sql-js/sql.js/">SQL.js</a></p>
+                <p>Composants web personnalisés pour les requêtes SQL créés et mis dans le domaine public par Zi Chong Kao, créateur de <a href="https://selectstarsql.com/">Select Star SQL.</a></p>
+                <p>Illustration du détective avec l'aimable autorisation de <a href="https://www.vecteezy.com/">Vectors by Vecteezy</a></p>
+                <p>Le code original de ce projet est publié sous la licence <a href="https://github.com/NUKnightLab/sql-mysteries/blob/master/LICENSE">MIT License</a></p>
+                <p>Le texte original et les autres contenus de ce projet sont protégés par le droit d'auteur. <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC BY-SA 4.0</a></p>
             </div>
         </div>
     </div>
 
-    <footer class="footer-knightlab--dark">
+    <!--<footer class="footer-knightlab--dark">
         <div class="container">
             <div class='grid grid-center'>
                 <div class='column-2 column-4-phone column-4-tablet'>
                     <a href="http://knightlab.northwestern.edu" target="_blank">
-                        <img src="https://cdn.knightlab.com/libs/orangeline/0.1.1/assets/logo-knightlab-stacked-dark-small.png" style="margin-left:auto;">
+                        <img src="https://cdn.knightlab.com/libs/orangeline/0.1.1/assets/logo-knightlab-stacked-dark-small.png" alt="Knight Lab Logo" style="margin-left:auto;">
                     </a>
                     <ul class="list--social text-align-center">
                         <li><a class="link--no-style" href="http://www.twitter.com/knightlab" target="_blank" title="Knight Lab on Twitter"><span class="icon-twitter"></span></a></li>
@@ -239,13 +216,13 @@
                     <div class="grid-size-2 grid-size-2-phone">
                         <div class="grid-item">
                             <a title="Medill School of Journalism, Media, Integrated Marketing Communications" href="http://www.medill.northwestern.edu/" target="_blank">
-                                <img src="https://cdn.knightlab.com/libs/orangeline/0.1.1/assets/logo-medill-dark.png">
+                                <img src="https://cdn.knightlab.com/libs/orangeline/0.1.1/assets/logo-medill-dark.png" alt="Medill Logo">
                             </a>
                         </div>
 
                         <div class="grid-item">
                             <a title="McCormick School of Engineering" href="http://www.mccormick.northwestern.edu/" target="_blank">
-                                <img src="https://cdn.knightlab.com/libs/orangeline/0.1.1/assets/logo-mccormick-dark.png">
+                                <img src="https://cdn.knightlab.com/libs/orangeline/0.1.1/assets/logo-mccormick-dark.png" alt="McCormick Logo">
                             </a>
                         </div>
                     </div>
@@ -278,7 +255,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <script src="https://cdn.knightlab.com/libs/orangeline/0.1.1/js/orangeline.js"></script>
     <script type="text/javascript">
