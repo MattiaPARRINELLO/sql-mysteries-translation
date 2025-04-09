@@ -2,6 +2,6 @@
   "project_name": "Mystère du meurtre dans la ville SQL",
   "project_description": "Ce projet est un projet issus d'un utilisateur github originellement en anglais, je l'ai ici traduit en français. Ce projet permet de pratiquer de manière ludique ces compétences en SQL.",
   "github_link": "https://github.com/MattiaPARRINELLO/sql-mysteries-translation",
-  "live_demo": "https://mattiaparrinello.fr/projets/files/sql/",
-  "project_image": "174092-clue-illustration.png"
+  "live_demo": "files/sql/",
+  "project_image": "files/sql/174092-clue-illustration.png"
 }
